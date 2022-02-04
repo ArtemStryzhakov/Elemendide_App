@@ -8,18 +8,23 @@
                 <Label x:Name="lbl"
                        Text="Valjuta nupule"
                        FontSize="Medium"
+                       TextColor="Black"
                        BackgroundColor="Beige">
                     <Label.GestureRecognizers>
-
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
                     </Label.GestureRecognizers>
                 </Label>
                 <Button x:Name="timer_btn"
                         Text="Naita info"
                         FontSize="Large"
                         Clicked="timer_btn_Clicked">
-                    
                 </Button>
             </FlexLayout>
+            <Button x:Name="tagasi"
+                    Text="Tagasi"
+                    FontSize="Large"
+                    Clicked="tagasi_Clicked">
+            </Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

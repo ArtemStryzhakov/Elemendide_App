@@ -56,13 +56,27 @@ namespace Elemendide_App
         private void Ed_TextChanged(object sender, TextChangedEventArgs e)
         {
             ed.TextChanged -= Ed_TextChanged;
-            char key = e.NewTextValue?.Last() ?? ' ';
+            char key = e.NewTextValue?.LastOrDefault() ?? ' ';
 
-            if (key == 'A')
+            /*if (key == 'A')
             {
                 i++;
                 lb.Text = key.ToString() + ": " + i;
+            }*/
+            /*else*/
+            if (ed.Text == ed.Text.ToUpper())
+            {
+                lb.Text = "True";
             }
+            else if (ed.Text != ed.Text.ToUpper())
+            {
+                lb.Text = "False";
+            }
+            else
+            {
+                lb.Text = "Mingi tekst";
+            }
+
             ed.TextChanged += Ed_TextChanged;
         }
 

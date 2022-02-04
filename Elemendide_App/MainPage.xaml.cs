@@ -25,13 +25,27 @@ namespace Elemendide_App
                 Text = "Timer",
                 BackgroundColor = Color.Red,
             };
+
+            Button BoxView_btn = new Button()
+            {
+                Text = "BoxView",
+                BackgroundColor = Color.Red,
+            };
+
+            BoxView_btn.Clicked += BoxView_Clicked;
             
             st.Children.Add(Ent_btn);
             st.Children.Add(Timer_btn);
+            st.Children.Add(BoxView_btn);
             st.BackgroundColor = Color.AntiqueWhite;
             Content = st;
             Ent_btn.Clicked += Ent_btn_Clicked;
             Timer_btn.Clicked += Timer_btn_Clicked;
+        }
+
+        private async void BoxView_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new BoxView_Page());
         }
 
         private  async void Timer_btn_Clicked(object sender, EventArgs e)
