@@ -63,12 +63,7 @@ namespace Elemendide_App
                 i++;
                 lb.Text = key.ToString() + ": " + i;
             }
-            ed.TextChanged += Ed_TextChanged1;
-        }
-
-        private void Ed_TextChanged1(object sender, TextChangedEventArgs e)
-        {
-            throw new NotImplementedException();
+            ed.TextChanged += Ed_TextChanged;
         }
 
         private async void Tagasi_Clicked(object sender, EventArgs e)
